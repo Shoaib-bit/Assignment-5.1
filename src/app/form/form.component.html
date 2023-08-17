@@ -1,0 +1,58 @@
+<div class="container">
+    <form (ngSubmit)="getAction()" [formGroup]="studentDetail">
+        <div>
+            <p>First Name*</p>
+            <input type="text" placeholder="Enter First Name" formControlName = "first_name">
+           
+        </div>
+        <div>
+            <p>Last Name*</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "last_name">
+        </div>
+        <div>
+            <p>Email*</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "email">
+        </div>
+        <div>
+            <p>Gender*</p>
+            <div class="gender">
+                <input type="radio" id="male" name="gender" formControlName = "gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" formControlName = "gender" value="femail">
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div>
+            <p>Date OF Birth*</p>
+            <input type="date" placeholder="Enter Last Name" formControlName = "dob" >
+        </div>
+        <div>
+            <p>Class*</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "class">
+        </div>
+        <div>
+            <p>Address</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "address">
+        </div>
+        <div>
+            <p>Phone Number</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "phone_number">
+        </div>
+        <div>
+            <p>Parent Email*</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "parents_email">
+        </div>
+        <div class="Password">
+            <p>Password</p>
+            <input type="text" placeholder="Enter Password" formControlName = "password">
+        </div>
+        <div class="description">
+            <p>Description</p>
+            <input type="text" placeholder="Enter Last Name" formControlName = "description">
+        </div>
+        <div class="btn">
+            <span *ngIf = "studentDetail.invalid">*Fill All the required Fields*</span>
+            <button type="submit">LOGIN</button>
+        </div>
+    </form>
+</div>
